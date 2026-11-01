@@ -76,8 +76,29 @@
   }
   .when .venue { display: block; color: var(--muted); font-weight: 400; }
 
+  .register {
+    margin: 28px 0 0;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px;
+  }
+  .register p { margin: 0; color: var(--muted); font-size: 0.95rem; max-width: 34ch; }
+  .register-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: var(--s1);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: filter 0.15s;
+  }
+  .register-btn:hover { filter: brightness(1.12); }
+  @media (prefers-color-scheme: dark) { .register-btn { color: var(--paper); } }
+  @media (prefers-reduced-motion: reduce) { .register-btn { transition: none; } }
+  @media print { .register-btn { color: #000; background: none; padding: 0; text-decoration: underline; } }
+
   /* ---------- The afternoon strip ---------- */
-  .day { margin: 20px auto 72px; }
+  .day { margin: 40px auto 72px; }
   .strip {
     display: grid;
     grid-template-columns: repeat(180, 1fr);
@@ -281,6 +302,10 @@
     Tuesday 17 November 2026, 1–4 pm
     <span class="venue">Steve Howard Room (5206), Melbourne Connect</span>
   </p>
+  <div class="register">
+    <a class="register-btn" href="https://forms.cloud.microsoft/r/kEnu40Vs7e" target="_blank" rel="noopener">Register to attend</a>
+    <p>Please register so we can order enough food for afternoon tea.</p>
+  </div>
 </header>
 
 <section class="wrap day" aria-label="The afternoon at a glance">
